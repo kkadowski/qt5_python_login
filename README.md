@@ -18,8 +18,8 @@ and users table on Postgresql server using:
 
 FILES:
 
-- database.ini - configuration of connection
+- database.ini - configuration of connection - !!! check your params  !!!  
 - pycompat.py - compatibility check 
 - db_con.py - file with class dbConnection
-- sql.py - creation of databas, table and first user
+- sql.py - creation of database, table and first user
 - login.py - login app
