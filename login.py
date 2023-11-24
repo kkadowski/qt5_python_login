@@ -83,8 +83,9 @@ class Ui_Login(object):
         password = hashlib.md5(self.lineEdit_2.text().encode('utf-8')).hexdigest()
         db = dbConnection()
         db.connect()
-        query = f"SELECT count(*) FROM users WHERE email=\'{email}\' AND pass = \'{password}\'"
-        row = db.fetchone(query)
+        query = f"SELECT count(*) FROM users WHERE email= %s AND pass = %s"
+        params = (email, password)
+        row = db.fetchone(query,params)
         db.close()
         if row[0] == 1:
             loggedas=f"You are logged as {email}"
