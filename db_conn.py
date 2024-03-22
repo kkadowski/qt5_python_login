@@ -3,17 +3,13 @@
     connection params from database.ini file
 """
 
-from pickle import UNICODE
-import sys
 import psycopg2
 from psycopg2 import connect
 from psycopg2.extras import DictConnection
 from pycompat import PY2
 from configparser import ConfigParser
 
-if PY2:
-    from psycopg2.extras import register_type, unicode
-    register_type(UNICODE)
+
 
 class dbConnection:
     

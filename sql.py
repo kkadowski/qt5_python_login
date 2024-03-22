@@ -3,7 +3,7 @@ Creating table: users
 Inserting user: admin, email: admin@example.com, password: admiadmin in MD5
 """
 import os
-from db_con import dbConnection
+from qt5_python_login.db_conn import dbConnection
 
 
 db = dbConnection()
